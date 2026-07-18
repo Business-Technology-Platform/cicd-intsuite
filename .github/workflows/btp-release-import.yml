@@ -37,8 +37,9 @@ on:
         description: "Target BTP Environment"
         required: false
         type: choice
-        options:  #!cicd:target-env-options!
+        options:
           - ""
+          - "DEV"
 
 permissions:
   contents: write
@@ -137,9 +138,9 @@ jobs:
   analyze-changes:
     needs: [initialize]
     name: Analyze Changes
-    uses: SAP/cicd-actions-for-sap-integration-suite/.github/workflows/analyze-changes.yml@v1
+    uses: Business-Technology-Platform/cicd-actions-for-sap-integration-suite/.github/workflows/analyze-changes.yml@main
     with:
-      workflow-ref: v1
+      workflow-ref: main
       target-env: ${{ github.event.inputs.target-env }}
       base-ref: ${{ github.event.inputs.base-ref }}
       target-ref: ${{ github.event.inputs.target-ref }}
@@ -159,9 +160,9 @@ jobs:
     needs: [initialize, analyze-changes]
     name: Execute Deployment
     if: ${{ github.event.inputs.perform-deploy == 'true' }}
-    uses: SAP/cicd-actions-for-sap-integration-suite/.github/workflows/delete-upload.yml@v1
+    uses: Business-Technology-Platform/cicd-actions-for-sap-integration-suite/.github/workflows/delete-upload.yml@main
     with:
-      workflow-ref: v1
+      workflow-ref: main
       target-env: ${{ github.event.inputs.target-env }}
       source-ref: ${{ github.event.inputs.target-ref }}
       integrationpackages-upload-ids: ${{ needs.analyze-changes.outputs.package_upload_csv_content }}

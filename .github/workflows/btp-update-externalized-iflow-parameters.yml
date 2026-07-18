@@ -19,8 +19,9 @@ on:
         description: "Environment"
         required: true
         type: choice
-        options:  #!cicd:target-env-options!
+        options:
           - ""
+          - "DEV"
       iflow-id:
         description: "IFlow ID"
         required: true
@@ -68,7 +69,7 @@ jobs:
           echo "token=$TOKEN" >> $GITHUB_OUTPUT
 
       - name: Check team authorization
-        uses: SAP/cicd-actions-for-sap-integration-suite/.github/actions/check-team-authorization@v1
+        uses: Business-Technology-Platform/cicd-actions-for-sap-integration-suite/.github/actions/check-team-authorization@main
         with:
           team-slug: ${{ vars.BTP_DEV_TEAM_SLUG }}
           github-token: ${{ steps.org-token.outputs.token }}
@@ -84,9 +85,9 @@ jobs:
 
   update-externalized-iflow-parameters:
     needs: initialize
-    uses: SAP/cicd-actions-for-sap-integration-suite/.github/workflows/update-externalized-iflow-parameters.yml@v1
+    uses: Business-Technology-Platform/cicd-actions-for-sap-integration-suite/.github/workflows/update-externalized-iflow-parameters.yml@main
     with:
-       workflow-ref: v1
+       workflow-ref: main
        target-env: ${{ inputs.target-env }}
        iflow-id: ${{ inputs.iflow-id }}
        source-ref: development
