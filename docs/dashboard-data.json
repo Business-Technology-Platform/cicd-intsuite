@@ -1,0 +1,44 @@
+{
+  "generated": "2026-07-18T13:55:18Z",
+  "environments": [
+    "DEV"
+  ],
+  "environmentUrls": {
+    "DEV": ""
+  },
+  "packages": [
+    {
+      "id": "GITPACKAGE",
+      "name": "GITPACKAGE",
+      "source": "btp",
+      "foundOnEnvironments": [
+        "DEV"
+      ],
+      "gitConfig": {
+        "found": true,
+        "jsonFormat": "new"
+      },
+      "iflows": [
+        {
+          "id": "Iflow_GIT",
+          "name": "Iflow_GIT",
+          "source": "btp",
+          "hasGitConfig": true,
+          "environments": {
+            "DEV": {
+              "deploy": "false",
+              "logLevel": "INFO",
+              "runtimeStatus": "NOT_DEPLOYED",
+              "runtimeVersion": ""
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "btpPackageCount": 1,
+    "gitOnlyPackageCount": 0,
+    "totalPackageCount": 1
+  }
+}
