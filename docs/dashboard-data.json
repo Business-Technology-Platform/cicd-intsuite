@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-18T13:55:18Z",
+  "generated": "2026-07-18T13:56:37Z",
   "environments": [
     "DEV"
   ],
@@ -15,19 +15,19 @@
         "DEV"
       ],
       "gitConfig": {
-        "found": true,
-        "jsonFormat": "new"
+        "found": false,
+        "jsonFormat": null
       },
       "iflows": [
         {
           "id": "Iflow_GIT",
           "name": "Iflow_GIT",
           "source": "btp",
-          "hasGitConfig": true,
+          "hasGitConfig": false,
           "environments": {
             "DEV": {
-              "deploy": "false",
-              "logLevel": "INFO",
+              "deploy": null,
+              "logLevel": null,
               "runtimeStatus": "NOT_DEPLOYED",
               "runtimeVersion": ""
             }
