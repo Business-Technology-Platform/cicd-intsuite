@@ -1,0 +1,23 @@
+{
+  "PackageIntegrationFlowParameters": {
+    "PackageName": "GITPACKAGE",
+    "PackageID": "GITPACKAGE",
+    "Artifacts": [
+      {
+        "ArtifactID": "Iflow_GIT",
+        "ArtifactName": "Iflow_GIT",
+        "ArtifactType": "INTEGRATION_FLOW",
+        "Parameters": [
+          {
+            "DataType": "xsd:string",
+            "Description": null,
+            "ParameterKey": "SAP_ProfileId",
+            "ParameterValues": {
+              "Default": "iflmap"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
