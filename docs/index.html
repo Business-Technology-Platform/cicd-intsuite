@@ -248,7 +248,7 @@
 <body>
   <div class="header">
     <h1>📊 Integration Suite Dashboard</h1>
-    <div class="meta"><span>📁 <strong>Business-Technology-Platform/cicd-intsuite</strong></span><span>📅 2026-07-18T13:56:37Z</span><span>🌍 DEV</span><span>📦 1 BTP packages</span>
+    <div class="meta"><span>📁 <strong>Business-Technology-Platform/cicd-intsuite</strong></span><span>📅 2026-07-19T02:38:16Z</span><span>🌍 DEV</span><span>📦 0 BTP packages</span>
     </div>
     <div class="scope-note">ℹ️ This dashboard covers Integration Flow (IFlow) artifacts only. Other artifact types (Value Mappings, Script Collections, etc.) are not included.</div>
     <nav class="page-nav">
@@ -276,17 +276,16 @@
       <h2>📈 Summary</h2>
       <div class="summary-grid">
         <div class="summary-card" data-card-filter="btp" onclick="toggleCardFilter('btp')">
-          <div class="number">1</div>
+          <div class="number">0</div>
           <div class="label">BTP Packages</div>
         </div>
         <div class="summary-card" data-card-filter="git-issues" onclick="toggleCardFilter('git-issues')">
-          <div class="number">1</div>
+          <div class="number">0</div>
           <div class="label">Git Config Issues</div>
-          <div class="sub-label">🔴 1 packages missing entirely</div>
+          <div class="sub-label">🔴 0 packages missing entirely</div>
           <div class="sub-label">⚠️ 0 packages with missing IFlows</div>
         </div>
       </div>
-      <div class="alert">⚠️ <strong>Action required:</strong> 1 package(s) and 1 IFlow(s) found on BTP have no Git deployment configuration.</div>
     </div>
     <div class="filter-bar">
       <input type="text" id="searchInput" placeholder="🔍 Filter by package or IFlow name/ID..." onkeyup="filterDashboard()">
@@ -300,30 +299,6 @@
       <label><input type="checkbox" id="showLogLevelError" onchange="toggleFilter(this,&apos;showLogLevelInfo&apos;)"> 🔴 Error</label>
       <button onclick="expandAll()">📂 Expand All</button>
       <button onclick="collapseAll()">📁 Collapse All</button>
-    </div>
-    <div class="package-section collapsed" data-package="GITPACKAGE GITPACKAGE" data-source="btp" data-git-found="false" data-has-nogit-iflows="true" data-missing-envs="false">
-      <div class="package-header not-in-git" onclick="togglePackage(this)">
-        <h2><span class="toggle-arrow">▶</span> ❓ 📦 GITPACKAGE (<code class="copyable" onclick="showIdMenu(event,'package','GITPACKAGE','','DEV','GITPACKAGE','false')" title="Click for options">GITPACKAGE</code>)</h2>
-        <div class="meta">❓ <strong>Not found in Git</strong> — This package exists on BTP but has no deployment configuration</div>
-      </div>
-      <div class="package-body">
-      <table>
-        <thead>
-          <tr>
-            <th>IFlow Name</th>
-            <th>IFlow ID</th>
-            <th>DEV<br><sub>Deploy · LogLevel · Runtime</sub></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="notingit-row" data-iflow="Iflow_GIT Iflow_GIT" data-loglevel="">
-            <td class="iflow-name" title="Iflow_GIT">❓ Iflow_GIT</td>
-            <td class="iflow-id" title="Iflow_GIT"><code class="copyable" onclick="showIdMenu(event,'iflow','Iflow_GIT','GITPACKAGE','DEV','','','')" title="Click for options">Iflow_GIT</code></td>
-            <td class="env-cell"><span class="row-item">—</span><span class="row-item">—</span><span class="row-item">⚫ N/A</span></td>
-          </tr>
-        </tbody>
-      </table>
-      </div>
     </div>
     <div class="legend">
       <h2>📋 Legend</h2>
