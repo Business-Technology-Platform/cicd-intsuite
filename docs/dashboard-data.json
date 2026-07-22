@@ -1,15 +1,29 @@
 {
-  "generated": "2026-07-21T02:35:50Z",
+  "generated": "2026-07-22T02:35:03Z",
   "environments": [
     "DEV"
   ],
   "environmentUrls": {
     "DEV": ""
   },
-  "packages": [],
+  "packages": [
+    {
+      "id": "Dummy1",
+      "name": "Dummy1",
+      "source": "btp",
+      "foundOnEnvironments": [
+        "DEV"
+      ],
+      "gitConfig": {
+        "found": false,
+        "jsonFormat": null
+      },
+      "iflows": []
+    }
+  ],
   "summary": {
-    "btpPackageCount": 0,
+    "btpPackageCount": 1,
     "gitOnlyPackageCount": 0,
-    "totalPackageCount": 0
+    "totalPackageCount": 1
   }
 }
