@@ -10,7 +10,7 @@
         "Parameters": [
           {
             "DataType": "custom:schedule",
-            "Description": null,
+            "Description": Timer,
             "ParameterKey": "Timer",
             "ParameterValues": {
               "Default": "simple.repeat --tz=Etc/GMT"
