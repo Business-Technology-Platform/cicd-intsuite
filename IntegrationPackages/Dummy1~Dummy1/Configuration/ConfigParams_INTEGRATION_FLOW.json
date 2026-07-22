@@ -1,0 +1,31 @@
+{
+  "PackageIntegrationFlowParameters": {
+    "PackageName": "Dummy1",
+    "PackageID": "Dummy1",
+    "Artifacts": [
+      {
+        "ArtifactID": "Dummy_Iflow",
+        "ArtifactName": "Dummy_Iflow",
+        "ArtifactType": "INTEGRATION_FLOW",
+        "Parameters": [
+          {
+            "DataType": "custom:schedule",
+            "Description": null,
+            "ParameterKey": "Timer",
+            "ParameterValues": {
+              "Default": "simple.repeat --tz=Etc/GMT"
+            }
+          },
+          {
+            "DataType": "xsd:string",
+            "Description": null,
+            "ParameterKey": "SAP_ProfileId",
+            "ParameterValues": {
+              "Default": "iflmap"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
