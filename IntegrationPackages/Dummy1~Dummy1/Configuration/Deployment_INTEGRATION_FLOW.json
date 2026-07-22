@@ -1,0 +1,16 @@
+{
+  "PackageIntegrationFlowDeployments": {
+    "PackageName": "Dummy1",
+    "PackageID": "Dummy1",
+    "IntegrationFlows": [
+      {
+        "ArtifactID": "Dummy_Iflow",
+        "ArtifactName": "Dummy_Iflow",
+        "Deploy": "false",
+        "Rank": "100",
+        "LogLevel": "INFO",
+        "Runtimes": "iflmap"
+      }
+    ]
+  }
+}

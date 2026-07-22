@@ -1,0 +1,16 @@
+{
+  "PackageIntegrationFlowDeployments": {
+    "PackageName": "QA_DUMMY_PACKAGE",
+    "PackageID": "QADUMMYPACKAGE",
+    "IntegrationFlows": [
+      {
+        "ArtifactID": "FILTER",
+        "ArtifactName": "FILTER",
+        "Deploy": "false",
+        "Rank": "100",
+        "LogLevel": "INFO",
+        "Runtimes": "iflmap"
+      }
+    ]
+  }
+}
