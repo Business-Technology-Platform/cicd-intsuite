@@ -32,6 +32,7 @@ on:
         options:
           - ""
           - "DEV"
+          - "QA"
 
 permissions:
   contents: write

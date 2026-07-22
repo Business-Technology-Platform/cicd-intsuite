@@ -22,6 +22,7 @@ on:
         options:
           - ""
           - "DEV"
+          - "QA"
       iflow-id:
         description: "IFlow ID"
         required: true

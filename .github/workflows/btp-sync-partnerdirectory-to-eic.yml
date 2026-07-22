@@ -36,6 +36,7 @@ on:
         options:
           - ""
           - "DEV"
+          - "QA"
 
 permissions:
   contents: read

@@ -23,6 +23,7 @@ on:
         options:
           - ""
           - "DEV"
+          - "QA"
       commit-message:
         description: "JIRA Story / SNOW Incident"
         required: true
