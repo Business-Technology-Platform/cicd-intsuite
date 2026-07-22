@@ -10,7 +10,7 @@
         "Parameters": [
           {
             "DataType": "xsd:string",
-            "Description": null,
+            "Description": dummy,
             "ParameterKey": "SAP_ProfileId",
             "ParameterValues": {
               "Default": "iflmap"
