@@ -1,0 +1,59 @@
+%%{init: { 'theme': 'base', 'themeVariables': { 'sequenceNumberColor': '#000000' 'primaryColor': '#2C3E50', 'edgeLabelBackground':'#ffffff', 'tertiaryColor': '#F4F6F7', 'primaryTextColor': '#2C3E50', 'primaryBorderColor': '#BDC3C7', 'lineColor': '#7F8C8D', 'noteBkgColor': '#FFFFFF', 'noteBorderColor': '#BDC3C7', 'actorBkg': '#FFFFFF', 'actorBorder': '#34495E', 'sequenceNumberColor': '#000000' } } }%%
+sequenceDiagram
+    autonumber
+    
+    box rgb(244,248,255) Source & Middleware
+        participant PIM as PIM System
+        participant SFTP as SFTP Server
+        participant CPI as SAP CPI
+    end
+
+    box rgb(252,245,232) Salesforce 
+        participant SFCC as Salesforce
+    end
+
+   
+    Note over PIM,SFCC: ━━━━━ Phase 1: Source File Ingestion ━━━━━
+    PIM->>SFTP: Drop Product Data Files (Products, Activation, Relations, Categories,Attachments)
+    CPI->>SFTP: Poll & Fetch Files
+    CPI->>CPI: Filter DeltaLoad
+    CPI->>CPI: Validate File Structure & Data
+
+  
+    Note over CPI,SFCC: ━━━━━ Phase 2: Picklist Synchronization ━━━━━
+    CPI->>SFCC: Retrieve Existing Picklist Metadata
+    SFCC-->>CPI: Picklist Metadata Response
+    CPI->>CPI: Compare & Process Picklist Delta
+    CPI->>SFCC: Upload New Picklist Values & Translations
+    
+    CPI->>SFCC: Retrieve Existing Products (SKUs)
+    SFCC-->>CPI: Existing Product Dataset
+    CPI->>CPI: Compare Incoming vs Existing Products
+
+    Note over CPI,SFCC: ━━━━━ Phase 3: Product Base Upload ━━━━━
+    alt New Product
+        CPI->>SFCC: Upload New Product Data & Media
+    else Existing Product
+        CPI->>SFCC: Update Existing Product Data
+    end
+
+   
+    Note over CPI,SFCC: ━━━━━ Phase 4-7: Qualifying Data Upload ━━━━━
+    CPI->>SFCC: Upload BULK_ Split Data
+    CPI->>SFCC: Upload Product Relations
+    CPI->>SFCC: Upload Product Attachments
+    CPI->>SFCC: Upload Product Translations I18N_
+
+  
+    Note over CPI,SFCC: ━━━━━ Phase 8-9: Categories & Slug ━━━━━
+    CPI->>SFCC: Upload Category Data
+    CPI->>SFCC: Refresh URL Slugs
+
+  
+    Note over CPI,SFCC: ━━━━━ Phase 10: Final Sync (Activation/Deactivation) ━━━━━
+    CPI->>SFCC: Upload Product Activation/Deactivation Status
+
+
+    Note over CPI,SFCC: ━━━━━ Phase 14: Monitoring & Finalization ━━━━━
+    CPI->>CPI: Archive Processed Files & Finalize Logs
+    CPI->>SFTP: Send Success Notification
