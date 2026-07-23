@@ -1,29 +1,395 @@
 {
-  "generated": "2026-07-22T02:35:03Z",
+  "generated": "2026-07-23T02:39:53Z",
   "environments": [
-    "DEV"
+    "DEV",
+    "QA"
   ],
   "environmentUrls": {
-    "DEV": ""
+    "DEV": "",
+    "QA": ""
   },
   "packages": [
     {
-      "id": "Dummy1",
-      "name": "Dummy1",
+      "id": "CloudIntegrationTradingPartnerManagementV2",
+      "name": "Cloud Integration - Trading Partner Management V2",
       "source": "btp",
       "foundOnEnvironments": [
-        "DEV"
+        "QA"
       ],
       "gitConfig": {
         "found": false,
         "jsonFormat": null
       },
-      "iflows": []
+      "iflows": [
+        {
+          "id": "Step_1_-_Sender_AS2_Communication_Flow_V2",
+          "name": "Step 1 - Sender AS2 Communication Flow V2",
+          "source": "btp",
+          "hasGitConfig": false,
+          "environments": {
+            "DEV": {
+              "deploy": null,
+              "logLevel": null,
+              "runtimeStatus": null,
+              "runtimeVersion": null
+            },
+            "QA": {
+              "deploy": null,
+              "logLevel": null,
+              "runtimeStatus": "NOT_DEPLOYED",
+              "runtimeVersion": ""
+            }
+          }
+        },
+        {
+          "id": "Step_1_-_Sender_AS2_MDN_Flow_V2",
+          "name": "Step 1 - Sender AS2 MDN Flow V2",
+          "source": "btp",
+          "hasGitConfig": false,
+          "environments": {
+            "DEV": {
+              "deploy": null,
+              "logLevel": null,
+              "runtimeStatus": null,
+              "runtimeVersion": null
+            },
+            "QA": {
+              "deploy": null,
+              "logLevel": null,
+              "runtimeStatus": "NOT_DEPLOYED",
+              "runtimeVersion": ""
+            }
+          }
+        },
+        {
+          "id": "Step_1_-_Sender_HTTP_Communication_Flow_V2",
+          "name": "Step 1 - Sender Communication Flow V2 - Internal",
+          "source": "btp",
+          "hasGitConfig": false,
+          "environments": {
+            "DEV": {
+              "deploy": null,
+              "logLevel": null,
+              "runtimeStatus": null,
+              "runtimeVersion": null
+            },
+            "QA": {
+              "deploy": null,
+              "logLevel": null,
+              "runtimeStatus": "NOT_DEPLOYED",
+              "runtimeVersion": ""
+            }
+          }
+        },
+        {
+          "id": "Step_1_-_Sender_IDOC_Communication_Flow_V2",
+          "name": "Step 1 - Sender IDOC Communication Flow V2",
+          "source": "btp",
+          "hasGitConfig": false,
+          "environments": {
+            "DEV": {
+              "deploy": null,
+              "logLevel": null,
+              "runtimeStatus": null,
+              "runtimeVersion": null
+            },
+            "QA": {
+              "deploy": null,
+              "logLevel": null,
+              "runtimeStatus": "NOT_DEPLOYED",
+              "runtimeVersion": ""
+            }
+          }
+        },
+        {
+          "id": "Step_1_-_Sender_Process_Direct_Communication_Flow_V2",
+          "name": "Step 1 - Sender Process Direct Communication Flow V2",
+          "source": "btp",
+          "hasGitConfig": false,
+          "environments": {
+            "DEV": {
+              "deploy": null,
+              "logLevel": null,
+              "runtimeStatus": null,
+              "runtimeVersion": null
+            },
+            "QA": {
+              "deploy": null,
+              "logLevel": null,
+              "runtimeStatus": "NOT_DEPLOYED",
+              "runtimeVersion": ""
+            }
+          }
+        },
+        {
+          "id": "Step_1_-_Sender_SFTP_Communication_Flow_V2",
+          "name": "Step 1 - Sender SFTP Communication Flow V2",
+          "source": "btp",
+          "hasGitConfig": false,
+          "environments": {
+            "DEV": {
+              "deploy": null,
+              "logLevel": null,
+              "runtimeStatus": null,
+              "runtimeVersion": null
+            },
+            "QA": {
+              "deploy": null,
+              "logLevel": null,
+              "runtimeStatus": "NOT_DEPLOYED",
+              "runtimeVersion": ""
+            }
+          }
+        },
+        {
+          "id": "Step_1_-_Sender_SOAP_Communication_Flow_V2",
+          "name": "Step 1 - Sender SOAP Communication Flow V2",
+          "source": "btp",
+          "hasGitConfig": false,
+          "environments": {
+            "DEV": {
+              "deploy": null,
+              "logLevel": null,
+              "runtimeStatus": null,
+              "runtimeVersion": null
+            },
+            "QA": {
+              "deploy": null,
+              "logLevel": null,
+              "runtimeStatus": "NOT_DEPLOYED",
+              "runtimeVersion": ""
+            }
+          }
+        },
+        {
+          "id": "Step_1b_-_Write_message_to_message_queue",
+          "name": "Step 1b - Write Message to Message queue",
+          "source": "btp",
+          "hasGitConfig": false,
+          "environments": {
+            "DEV": {
+              "deploy": null,
+              "logLevel": null,
+              "runtimeStatus": null,
+              "runtimeVersion": null
+            },
+            "QA": {
+              "deploy": null,
+              "logLevel": null,
+              "runtimeStatus": "NOT_DEPLOYED",
+              "runtimeVersion": ""
+            }
+          }
+        },
+        {
+          "id": "Step_2_-_Interchange_Processing_Flow_V2",
+          "name": "Step 2 - Interchange Processing Flow V2",
+          "source": "btp",
+          "hasGitConfig": false,
+          "environments": {
+            "DEV": {
+              "deploy": null,
+              "logLevel": null,
+              "runtimeStatus": null,
+              "runtimeVersion": null
+            },
+            "QA": {
+              "deploy": null,
+              "logLevel": null,
+              "runtimeStatus": "NOT_DEPLOYED",
+              "runtimeVersion": ""
+            }
+          }
+        },
+        {
+          "id": "Step_3_-_Receiver_Communication_Flow_V2",
+          "name": "Step 3 - Receiver Communication Flow V2",
+          "source": "btp",
+          "hasGitConfig": false,
+          "environments": {
+            "DEV": {
+              "deploy": null,
+              "logLevel": null,
+              "runtimeStatus": null,
+              "runtimeVersion": null
+            },
+            "QA": {
+              "deploy": null,
+              "logLevel": null,
+              "runtimeStatus": "NOT_DEPLOYED",
+              "runtimeVersion": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ConceptPOC",
+      "name": "Concept POC",
+      "source": "btp",
+      "foundOnEnvironments": [
+        "QA"
+      ],
+      "gitConfig": {
+        "found": false,
+        "jsonFormat": null
+      },
+      "iflows": [
+        {
+          "id": "Filter",
+          "name": "Filter",
+          "source": "btp",
+          "hasGitConfig": false,
+          "environments": {
+            "DEV": {
+              "deploy": null,
+              "logLevel": null,
+              "runtimeStatus": null,
+              "runtimeVersion": null
+            },
+            "QA": {
+              "deploy": null,
+              "logLevel": null,
+              "runtimeStatus": "STARTED",
+              "runtimeVersion": "1.0.0"
+            }
+          }
+        },
+        {
+          "id": "IF_Filter",
+          "name": "IF_Filter",
+          "source": "btp",
+          "hasGitConfig": false,
+          "environments": {
+            "DEV": {
+              "deploy": null,
+              "logLevel": null,
+              "runtimeStatus": null,
+              "runtimeVersion": null
+            },
+            "QA": {
+              "deploy": null,
+              "logLevel": null,
+              "runtimeStatus": "STARTED",
+              "runtimeVersion": "1.0.0"
+            }
+          }
+        },
+        {
+          "id": "IF_JMS_Concept",
+          "name": "IF_JMS_Concept",
+          "source": "btp",
+          "hasGitConfig": false,
+          "environments": {
+            "DEV": {
+              "deploy": null,
+              "logLevel": null,
+              "runtimeStatus": null,
+              "runtimeVersion": null
+            },
+            "QA": {
+              "deploy": null,
+              "logLevel": null,
+              "runtimeStatus": "STARTED",
+              "runtimeVersion": "1.0.0"
+            }
+          }
+        },
+        {
+          "id": "Splitter",
+          "name": "Splitter",
+          "source": "btp",
+          "hasGitConfig": false,
+          "environments": {
+            "DEV": {
+              "deploy": null,
+              "logLevel": null,
+              "runtimeStatus": null,
+              "runtimeVersion": null
+            },
+            "QA": {
+              "deploy": null,
+              "logLevel": null,
+              "runtimeStatus": "NOT_DEPLOYED",
+              "runtimeVersion": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "Dummy1",
+      "name": "Dummy1",
+      "source": "btp",
+      "foundOnEnvironments": [
+        "DEV",
+        "QA"
+      ],
+      "gitConfig": {
+        "found": false,
+        "jsonFormat": null
+      },
+      "iflows": [
+        {
+          "id": "Dummy_Iflow",
+          "name": "Dummy_Iflow",
+          "source": "btp",
+          "hasGitConfig": false,
+          "environments": {
+            "DEV": {
+              "deploy": null,
+              "logLevel": null,
+              "runtimeStatus": "STARTED",
+              "runtimeVersion": "1.0.0"
+            },
+            "QA": {
+              "deploy": null,
+              "logLevel": null,
+              "runtimeStatus": "NOT_DEPLOYED",
+              "runtimeVersion": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "QADUMMYPACKAGE",
+      "name": "QA_DUMMY_PACKAGE",
+      "source": "btp",
+      "foundOnEnvironments": [
+        "QA"
+      ],
+      "gitConfig": {
+        "found": false,
+        "jsonFormat": null
+      },
+      "iflows": [
+        {
+          "id": "FILTER",
+          "name": "FILTER",
+          "source": "btp",
+          "hasGitConfig": false,
+          "environments": {
+            "DEV": {
+              "deploy": null,
+              "logLevel": null,
+              "runtimeStatus": null,
+              "runtimeVersion": null
+            },
+            "QA": {
+              "deploy": null,
+              "logLevel": null,
+              "runtimeStatus": "STARTED",
+              "runtimeVersion": "1.0.1"
+            }
+          }
+        }
+      ]
     }
   ],
   "summary": {
-    "btpPackageCount": 1,
+    "btpPackageCount": 4,
     "gitOnlyPackageCount": 0,
-    "totalPackageCount": 1
+    "totalPackageCount": 4
   }
 }

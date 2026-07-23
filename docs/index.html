@@ -248,7 +248,7 @@
 <body>
   <div class="header">
     <h1>📊 Integration Suite Dashboard</h1>
-    <div class="meta"><span>📁 <strong>Business-Technology-Platform/cicd-intsuite</strong></span><span>📅 2026-07-22T02:35:03Z</span><span>🌍 DEV</span><span>📦 1 BTP packages</span>
+    <div class="meta"><span>📁 <strong>Business-Technology-Platform/cicd-intsuite</strong></span><span>📅 2026-07-23T02:39:53Z</span><span>🌍 DEV, QA</span><span>📦 4 BTP packages</span>
     </div>
     <div class="scope-note">ℹ️ This dashboard covers Integration Flow (IFlow) artifacts only. Other artifact types (Value Mappings, Script Collections, etc.) are not included.</div>
     <nav class="page-nav">
@@ -276,17 +276,21 @@
       <h2>📈 Summary</h2>
       <div class="summary-grid">
         <div class="summary-card" data-card-filter="btp" onclick="toggleCardFilter('btp')">
-          <div class="number">1</div>
+          <div class="number">4</div>
           <div class="label">BTP Packages</div>
         </div>
+        <div class="summary-card" data-card-filter="not-all-envs" onclick="toggleCardFilter('not-all-envs')">
+          <div class="number">3</div>
+          <div class="label">Not on All Environments</div>
+        </div>
         <div class="summary-card" data-card-filter="git-issues" onclick="toggleCardFilter('git-issues')">
-          <div class="number">1</div>
+          <div class="number">4</div>
           <div class="label">Git Config Issues</div>
-          <div class="sub-label">🔴 1 packages missing entirely</div>
+          <div class="sub-label">🔴 4 packages missing entirely</div>
           <div class="sub-label">⚠️ 0 packages with missing IFlows</div>
         </div>
       </div>
-      <div class="alert">⚠️ <strong>Action required:</strong> 1 package(s) and 0 IFlow(s) found on BTP have no Git deployment configuration.</div>
+      <div class="alert">⚠️ <strong>Action required:</strong> 4 package(s) and 16 IFlow(s) found on BTP have no Git deployment configuration.</div>
     </div>
     <div class="filter-bar">
       <input type="text" id="searchInput" placeholder="🔍 Filter by package or IFlow name/ID..." onkeyup="filterDashboard()">
@@ -301,9 +305,133 @@
       <button onclick="expandAll()">📂 Expand All</button>
       <button onclick="collapseAll()">📁 Collapse All</button>
     </div>
-    <div class="package-section collapsed" data-package="Dummy1 Dummy1" data-source="btp" data-git-found="false" data-has-nogit-iflows="false" data-missing-envs="false">
+    <div class="package-section collapsed" data-package="CloudIntegrationTradingPartnerManagementV2 Cloud Integration - Trading Partner Management V2" data-source="btp" data-git-found="false" data-has-nogit-iflows="true" data-missing-envs="true">
       <div class="package-header not-in-git" onclick="togglePackage(this)">
-        <h2><span class="toggle-arrow">▶</span> ❓ 📦 Dummy1 (<code class="copyable" onclick="showIdMenu(event,'package','Dummy1','','DEV','Dummy1','false')" title="Click for options">Dummy1</code>)</h2>
+        <h2><span class="toggle-arrow">▶</span> ❓ 📦 Cloud Integration - Trading Partner Management V2 (<code class="copyable" onclick="showIdMenu(event,'package','CloudIntegrationTradingPartnerManagementV2','','QA','Cloud Integration - Trading Partner Management V2','false')" title="Click for options">CloudIntegrationTradingPartnerManagementV2</code>)</h2>
+        <div class="meta">❓ <strong>Not found in Git</strong> — This package exists on BTP but has no deployment configuration · 📦 <strong>Not found on:</strong> DEV</div>
+      </div>
+      <div class="package-body">
+      <table>
+        <thead>
+          <tr>
+            <th>IFlow Name</th>
+            <th>IFlow ID</th>
+            <th>DEV<br><sub>Deploy · LogLevel · Runtime</sub></th>
+            <th>QA<br><sub>Deploy · LogLevel · Runtime</sub></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="notingit-row" data-iflow="Step_1_-_Sender_AS2_Communication_Flow_V2 Step 1 - Sender AS2 Communication Flow V2" data-loglevel="">
+            <td class="iflow-name" title="Step 1 - Sender AS2 Communication Flow V2">❓ Step 1 - Sender AS2 Communication Flow V2</td>
+            <td class="iflow-id" title="Step_1_-_Sender_AS2_Communication_Flow_V2"><code class="copyable" onclick="showIdMenu(event,'iflow','Step_1_-_Sender_AS2_Communication_Flow_V2','CloudIntegrationTradingPartnerManagementV2','QA','','','')" title="Click for options">Step_1_-_Sender_AS2_Communication_Flow_V2</code></td>
+            <td class="env-not-found" title="Package not found on DEV">📦 Not found</td>
+            <td class="env-cell"><span class="row-item">—</span><span class="row-item">—</span><span class="row-item">⚫ N/A</span></td>
+          </tr>
+          <tr class="notingit-row" data-iflow="Step_1_-_Sender_AS2_MDN_Flow_V2 Step 1 - Sender AS2 MDN Flow V2" data-loglevel="">
+            <td class="iflow-name" title="Step 1 - Sender AS2 MDN Flow V2">❓ Step 1 - Sender AS2 MDN Flow V2</td>
+            <td class="iflow-id" title="Step_1_-_Sender_AS2_MDN_Flow_V2"><code class="copyable" onclick="showIdMenu(event,'iflow','Step_1_-_Sender_AS2_MDN_Flow_V2','CloudIntegrationTradingPartnerManagementV2','QA','','','')" title="Click for options">Step_1_-_Sender_AS2_MDN_Flow_V2</code></td>
+            <td class="env-not-found" title="Package not found on DEV">📦 Not found</td>
+            <td class="env-cell"><span class="row-item">—</span><span class="row-item">—</span><span class="row-item">⚫ N/A</span></td>
+          </tr>
+          <tr class="notingit-row" data-iflow="Step_1_-_Sender_HTTP_Communication_Flow_V2 Step 1 - Sender Communication Flow V2 - Internal" data-loglevel="">
+            <td class="iflow-name" title="Step 1 - Sender Communication Flow V2 - Internal">❓ Step 1 - Sender Communication Flow V2 - Internal</td>
+            <td class="iflow-id" title="Step_1_-_Sender_HTTP_Communication_Flow_V2"><code class="copyable" onclick="showIdMenu(event,'iflow','Step_1_-_Sender_HTTP_Communication_Flow_V2','CloudIntegrationTradingPartnerManagementV2','QA','','','')" title="Click for options">Step_1_-_Sender_HTTP_Communication_Flow_V2</code></td>
+            <td class="env-not-found" title="Package not found on DEV">📦 Not found</td>
+            <td class="env-cell"><span class="row-item">—</span><span class="row-item">—</span><span class="row-item">⚫ N/A</span></td>
+          </tr>
+          <tr class="notingit-row" data-iflow="Step_1_-_Sender_IDOC_Communication_Flow_V2 Step 1 - Sender IDOC Communication Flow V2" data-loglevel="">
+            <td class="iflow-name" title="Step 1 - Sender IDOC Communication Flow V2">❓ Step 1 - Sender IDOC Communication Flow V2</td>
+            <td class="iflow-id" title="Step_1_-_Sender_IDOC_Communication_Flow_V2"><code class="copyable" onclick="showIdMenu(event,'iflow','Step_1_-_Sender_IDOC_Communication_Flow_V2','CloudIntegrationTradingPartnerManagementV2','QA','','','')" title="Click for options">Step_1_-_Sender_IDOC_Communication_Flow_V2</code></td>
+            <td class="env-not-found" title="Package not found on DEV">📦 Not found</td>
+            <td class="env-cell"><span class="row-item">—</span><span class="row-item">—</span><span class="row-item">⚫ N/A</span></td>
+          </tr>
+          <tr class="notingit-row" data-iflow="Step_1_-_Sender_Process_Direct_Communication_Flow_V2 Step 1 - Sender Process Direct Communication Flow V2" data-loglevel="">
+            <td class="iflow-name" title="Step 1 - Sender Process Direct Communication Flow V2">❓ Step 1 - Sender Process Direct Communication Flow V2</td>
+            <td class="iflow-id" title="Step_1_-_Sender_Process_Direct_Communication_Flow_V2"><code class="copyable" onclick="showIdMenu(event,'iflow','Step_1_-_Sender_Process_Direct_Communication_Flow_V2','CloudIntegrationTradingPartnerManagementV2','QA','','','')" title="Click for options">Step_1_-_Sender_Process_Direct_Communication_Flow_V2</code></td>
+            <td class="env-not-found" title="Package not found on DEV">📦 Not found</td>
+            <td class="env-cell"><span class="row-item">—</span><span class="row-item">—</span><span class="row-item">⚫ N/A</span></td>
+          </tr>
+          <tr class="notingit-row" data-iflow="Step_1_-_Sender_SFTP_Communication_Flow_V2 Step 1 - Sender SFTP Communication Flow V2" data-loglevel="">
+            <td class="iflow-name" title="Step 1 - Sender SFTP Communication Flow V2">❓ Step 1 - Sender SFTP Communication Flow V2</td>
+            <td class="iflow-id" title="Step_1_-_Sender_SFTP_Communication_Flow_V2"><code class="copyable" onclick="showIdMenu(event,'iflow','Step_1_-_Sender_SFTP_Communication_Flow_V2','CloudIntegrationTradingPartnerManagementV2','QA','','','')" title="Click for options">Step_1_-_Sender_SFTP_Communication_Flow_V2</code></td>
+            <td class="env-not-found" title="Package not found on DEV">📦 Not found</td>
+            <td class="env-cell"><span class="row-item">—</span><span class="row-item">—</span><span class="row-item">⚫ N/A</span></td>
+          </tr>
+          <tr class="notingit-row" data-iflow="Step_1_-_Sender_SOAP_Communication_Flow_V2 Step 1 - Sender SOAP Communication Flow V2" data-loglevel="">
+            <td class="iflow-name" title="Step 1 - Sender SOAP Communication Flow V2">❓ Step 1 - Sender SOAP Communication Flow V2</td>
+            <td class="iflow-id" title="Step_1_-_Sender_SOAP_Communication_Flow_V2"><code class="copyable" onclick="showIdMenu(event,'iflow','Step_1_-_Sender_SOAP_Communication_Flow_V2','CloudIntegrationTradingPartnerManagementV2','QA','','','')" title="Click for options">Step_1_-_Sender_SOAP_Communication_Flow_V2</code></td>
+            <td class="env-not-found" title="Package not found on DEV">📦 Not found</td>
+            <td class="env-cell"><span class="row-item">—</span><span class="row-item">—</span><span class="row-item">⚫ N/A</span></td>
+          </tr>
+          <tr class="notingit-row" data-iflow="Step_1b_-_Write_message_to_message_queue Step 1b - Write Message to Message queue" data-loglevel="">
+            <td class="iflow-name" title="Step 1b - Write Message to Message queue">❓ Step 1b - Write Message to Message queue</td>
+            <td class="iflow-id" title="Step_1b_-_Write_message_to_message_queue"><code class="copyable" onclick="showIdMenu(event,'iflow','Step_1b_-_Write_message_to_message_queue','CloudIntegrationTradingPartnerManagementV2','QA','','','')" title="Click for options">Step_1b_-_Write_message_to_message_queue</code></td>
+            <td class="env-not-found" title="Package not found on DEV">📦 Not found</td>
+            <td class="env-cell"><span class="row-item">—</span><span class="row-item">—</span><span class="row-item">⚫ N/A</span></td>
+          </tr>
+          <tr class="notingit-row" data-iflow="Step_2_-_Interchange_Processing_Flow_V2 Step 2 - Interchange Processing Flow V2" data-loglevel="">
+            <td class="iflow-name" title="Step 2 - Interchange Processing Flow V2">❓ Step 2 - Interchange Processing Flow V2</td>
+            <td class="iflow-id" title="Step_2_-_Interchange_Processing_Flow_V2"><code class="copyable" onclick="showIdMenu(event,'iflow','Step_2_-_Interchange_Processing_Flow_V2','CloudIntegrationTradingPartnerManagementV2','QA','','','')" title="Click for options">Step_2_-_Interchange_Processing_Flow_V2</code></td>
+            <td class="env-not-found" title="Package not found on DEV">📦 Not found</td>
+            <td class="env-cell"><span class="row-item">—</span><span class="row-item">—</span><span class="row-item">⚫ N/A</span></td>
+          </tr>
+          <tr class="notingit-row" data-iflow="Step_3_-_Receiver_Communication_Flow_V2 Step 3 - Receiver Communication Flow V2" data-loglevel="">
+            <td class="iflow-name" title="Step 3 - Receiver Communication Flow V2">❓ Step 3 - Receiver Communication Flow V2</td>
+            <td class="iflow-id" title="Step_3_-_Receiver_Communication_Flow_V2"><code class="copyable" onclick="showIdMenu(event,'iflow','Step_3_-_Receiver_Communication_Flow_V2','CloudIntegrationTradingPartnerManagementV2','QA','','','')" title="Click for options">Step_3_-_Receiver_Communication_Flow_V2</code></td>
+            <td class="env-not-found" title="Package not found on DEV">📦 Not found</td>
+            <td class="env-cell"><span class="row-item">—</span><span class="row-item">—</span><span class="row-item">⚫ N/A</span></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+    <div class="package-section collapsed" data-package="ConceptPOC Concept POC" data-source="btp" data-git-found="false" data-has-nogit-iflows="true" data-missing-envs="true">
+      <div class="package-header not-in-git" onclick="togglePackage(this)">
+        <h2><span class="toggle-arrow">▶</span> ❓ 📦 Concept POC (<code class="copyable" onclick="showIdMenu(event,'package','ConceptPOC','','QA','Concept POC','false')" title="Click for options">ConceptPOC</code>)</h2>
+        <div class="meta">❓ <strong>Not found in Git</strong> — This package exists on BTP but has no deployment configuration · 📦 <strong>Not found on:</strong> DEV</div>
+      </div>
+      <div class="package-body">
+      <table>
+        <thead>
+          <tr>
+            <th>IFlow Name</th>
+            <th>IFlow ID</th>
+            <th>DEV<br><sub>Deploy · LogLevel · Runtime</sub></th>
+            <th>QA<br><sub>Deploy · LogLevel · Runtime</sub></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="notingit-row" data-iflow="Filter Filter" data-loglevel="">
+            <td class="iflow-name" title="Filter">❓ Filter</td>
+            <td class="iflow-id" title="Filter"><code class="copyable" onclick="showIdMenu(event,'iflow','Filter','ConceptPOC','QA','','','QA')" title="Click for options">Filter</code></td>
+            <td class="env-not-found" title="Package not found on DEV">📦 Not found</td>
+            <td class="env-cell"><span class="row-item">—</span><span class="row-item">—</span><span class="row-item">✅ STARTED v1.0.0</span></td>
+          </tr>
+          <tr class="notingit-row" data-iflow="IF_Filter IF_Filter" data-loglevel="">
+            <td class="iflow-name" title="IF_Filter">❓ IF_Filter</td>
+            <td class="iflow-id" title="IF_Filter"><code class="copyable" onclick="showIdMenu(event,'iflow','IF_Filter','ConceptPOC','QA','','','QA')" title="Click for options">IF_Filter</code></td>
+            <td class="env-not-found" title="Package not found on DEV">📦 Not found</td>
+            <td class="env-cell"><span class="row-item">—</span><span class="row-item">—</span><span class="row-item">✅ STARTED v1.0.0</span></td>
+          </tr>
+          <tr class="notingit-row" data-iflow="IF_JMS_Concept IF_JMS_Concept" data-loglevel="">
+            <td class="iflow-name" title="IF_JMS_Concept">❓ IF_JMS_Concept</td>
+            <td class="iflow-id" title="IF_JMS_Concept"><code class="copyable" onclick="showIdMenu(event,'iflow','IF_JMS_Concept','ConceptPOC','QA','','','QA')" title="Click for options">IF_JMS_Concept</code></td>
+            <td class="env-not-found" title="Package not found on DEV">📦 Not found</td>
+            <td class="env-cell"><span class="row-item">—</span><span class="row-item">—</span><span class="row-item">✅ STARTED v1.0.0</span></td>
+          </tr>
+          <tr class="notingit-row" data-iflow="Splitter Splitter" data-loglevel="">
+            <td class="iflow-name" title="Splitter">❓ Splitter</td>
+            <td class="iflow-id" title="Splitter"><code class="copyable" onclick="showIdMenu(event,'iflow','Splitter','ConceptPOC','QA','','','')" title="Click for options">Splitter</code></td>
+            <td class="env-not-found" title="Package not found on DEV">📦 Not found</td>
+            <td class="env-cell"><span class="row-item">—</span><span class="row-item">—</span><span class="row-item">⚫ N/A</span></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+    <div class="package-section collapsed" data-package="Dummy1 Dummy1" data-source="btp" data-git-found="false" data-has-nogit-iflows="true" data-missing-envs="false">
+      <div class="package-header not-in-git" onclick="togglePackage(this)">
+        <h2><span class="toggle-arrow">▶</span> ❓ 📦 Dummy1 (<code class="copyable" onclick="showIdMenu(event,'package','Dummy1','','DEV,QA','Dummy1','false')" title="Click for options">Dummy1</code>)</h2>
         <div class="meta">❓ <strong>Not found in Git</strong> — This package exists on BTP but has no deployment configuration</div>
       </div>
       <div class="package-body">
@@ -313,10 +441,42 @@
             <th>IFlow Name</th>
             <th>IFlow ID</th>
             <th>DEV<br><sub>Deploy · LogLevel · Runtime</sub></th>
+            <th>QA<br><sub>Deploy · LogLevel · Runtime</sub></th>
           </tr>
         </thead>
         <tbody>
-          <tr><td colspan="3">⚠️ <em>No IFlows found — package not in Git</em></td></tr>
+          <tr class="notingit-row" data-iflow="Dummy_Iflow Dummy_Iflow" data-loglevel="">
+            <td class="iflow-name" title="Dummy_Iflow">❓ Dummy_Iflow</td>
+            <td class="iflow-id" title="Dummy_Iflow"><code class="copyable" onclick="showIdMenu(event,'iflow','Dummy_Iflow','Dummy1','DEV,QA','','','DEV')" title="Click for options">Dummy_Iflow</code></td>
+            <td class="env-cell"><span class="row-item">—</span><span class="row-item">—</span><span class="row-item">✅ STARTED v1.0.0</span></td>
+            <td class="env-cell"><span class="row-item">—</span><span class="row-item">—</span><span class="row-item">⚫ N/A</span></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+    <div class="package-section collapsed" data-package="QADUMMYPACKAGE QA_DUMMY_PACKAGE" data-source="btp" data-git-found="false" data-has-nogit-iflows="true" data-missing-envs="true">
+      <div class="package-header not-in-git" onclick="togglePackage(this)">
+        <h2><span class="toggle-arrow">▶</span> ❓ 📦 QA_DUMMY_PACKAGE (<code class="copyable" onclick="showIdMenu(event,'package','QADUMMYPACKAGE','','QA','QA_DUMMY_PACKAGE','false')" title="Click for options">QADUMMYPACKAGE</code>)</h2>
+        <div class="meta">❓ <strong>Not found in Git</strong> — This package exists on BTP but has no deployment configuration · 📦 <strong>Not found on:</strong> DEV</div>
+      </div>
+      <div class="package-body">
+      <table>
+        <thead>
+          <tr>
+            <th>IFlow Name</th>
+            <th>IFlow ID</th>
+            <th>DEV<br><sub>Deploy · LogLevel · Runtime</sub></th>
+            <th>QA<br><sub>Deploy · LogLevel · Runtime</sub></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="notingit-row" data-iflow="FILTER FILTER" data-loglevel="">
+            <td class="iflow-name" title="FILTER">❓ FILTER</td>
+            <td class="iflow-id" title="FILTER"><code class="copyable" onclick="showIdMenu(event,'iflow','FILTER','QADUMMYPACKAGE','QA','','','QA')" title="Click for options">FILTER</code></td>
+            <td class="env-not-found" title="Package not found on DEV">📦 Not found</td>
+            <td class="env-cell"><span class="row-item">—</span><span class="row-item">—</span><span class="row-item">✅ STARTED v1.0.1</span></td>
+          </tr>
         </tbody>
       </table>
       </div>
@@ -339,8 +499,8 @@
       <p style="margin-top:8px;font-size:13px;color:#57606a;"><strong>JSON Format:</strong> 🟢 new = Enhanced format with Environments overrides | 🟡 old = Legacy format with flat Deploy flag | ⚪ none = No deployment configuration found</p>
       <p style="margin-top:4px;font-size:13px;color:#57606a;"><strong>Scope:</strong> This dashboard considers Integration Flow (IFlow) artifacts only. Other artifact types such as Value Mappings, Script Collections, or Message Mappings are not included.</p>
     </div>
-    <script>var envUrls = {"DEV":""};
-    var envOrder = ["DEV"];
+    <script>var envUrls = {"DEV":"","QA":""};
+    var envOrder = ["DEV","QA"];
     var gitBaseUrl = "https://github.com/Business-Technology-Platform/cicd-intsuite";</script>
     <script>
       var copyToast = null;
