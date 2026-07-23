@@ -1,0 +1,40 @@
+@startuml
+    entity Einheit {
+		stockwerk : Text 
+	}
+	entity SF-OrderItemGroup {
+		* ID : Nummer 
+	}
+ 
+	entity SAP-Kundenauftrag {
+		Z-OrderItemGroup : Nummer
+	}
+ 
+	entity SAP-Serviceauftrag {
+		Z-OrderItemGroup : Nummer 
+	}
+ 
+	
+    Bauobjekt ||--o{Projekt:"beteiligt"
+	Bauobjekt ||--o{Bauobjekt:"hat"
+	Bauobjekt ||--o{Einheit:"hat"
+	Bauobjekt |o--o{Asset:"hat"
+	Einheit ||--o{Asset:"hat"
+	Einheit ||--o{Opportunity:"hat"
+	Projekt ||--o{Opportunity:"hat"
+	Bauobjekt |o--o{Quote:"hat"
+	Bauobjekt ||--o{Opportunity:"hat"
+	Einheit |o--o{Quote:"hat"
+	Opportunity ||--o{Quote:"hat"
+	"SF-Order" ||--|{"SF-OrderItemGroup":"hat"
+	WinnerFlexDesign |o--|{"SF-OrderItemGroup":"gehört zu"
+	"SF-OrderItemGroup" ||--||"SF-OrderDeliveryGroup":"ist Bestandteil von"
+	"SF-OrderItemGroup" ||--o|"SF-WorkOrder":"ist Bestandteil von"
+	"SF-OrderDeliveryGroup" ||--o|"SAP-Kundenauftrag":"hat"
+	"SF-WorkOrder" ||--o|"SAP-Serviceauftrag":"hat"
+	"SAP-Kundenauftrag" ||--|| "SAP-Basis_Faktura": "hat"
+	"SAP-Kundenauftrag" |o--|| "SAP-Mehr_Minder_Faktura": "hat"
+	"SAP-Serviceauftrag" ||--|| "SAP-Basis_Faktura": "hat"
+	"SAP-Serviceauftrag" |o--|| "SAP-Mehr_Minder_Faktura": "hat"
+	Quote ||--o|"SF-Order":"hat"
+@enduml
