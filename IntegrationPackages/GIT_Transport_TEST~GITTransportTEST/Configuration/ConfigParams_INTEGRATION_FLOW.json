@@ -1,0 +1,23 @@
+{
+  "PackageIntegrationFlowParameters": {
+    "PackageName": "GIT_Transport_TEST",
+    "PackageID": "GITTransportTEST",
+    "Artifacts": [
+      {
+        "ArtifactID": "Git_Test",
+        "ArtifactName": "Git_Test",
+        "ArtifactType": "INTEGRATION_FLOW",
+        "Parameters": [
+          {
+            "DataType": "xsd:string",
+            "Description": null,
+            "ParameterKey": "SAP_ProfileId",
+            "ParameterValues": {
+              "Default": "iflmap"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

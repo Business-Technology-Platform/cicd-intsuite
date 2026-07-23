@@ -1,0 +1,16 @@
+{
+  "PackageIntegrationFlowDeployments": {
+    "PackageName": "GIT_Transport_TEST",
+    "PackageID": "GITTransportTEST",
+    "IntegrationFlows": [
+      {
+        "ArtifactID": "Git_Test",
+        "ArtifactName": "Git_Test",
+        "Deploy": "false",
+        "Rank": "100",
+        "LogLevel": "INFO",
+        "Runtimes": "iflmap"
+      }
+    ]
+  }
+}
