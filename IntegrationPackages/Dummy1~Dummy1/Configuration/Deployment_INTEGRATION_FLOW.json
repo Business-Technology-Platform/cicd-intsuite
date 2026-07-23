@@ -4,8 +4,8 @@
     "PackageID": "Dummy1",
     "IntegrationFlows": [
       {
-        "ArtifactID": "Dummy_Iflow",
-        "ArtifactName": "Dummy_Iflow",
+        "ArtifactID": "Dummy_Iflow1",
+        "ArtifactName": "Dummy_Iflow1",
         "Deploy": "false",
         "Rank": "100",
         "LogLevel": "INFO",
