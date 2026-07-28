@@ -248,7 +248,7 @@
 <body>
   <div class="header">
     <h1>📊 Integration Suite Dashboard</h1>
-    <div class="meta"><span>📁 <strong>Business-Technology-Platform/cicd-intsuite</strong></span><span>📅 2026-07-27T02:51:05Z</span><span>🌍 DEV, QA</span><span>📦 7 BTP packages</span>
+    <div class="meta"><span>📁 <strong>Business-Technology-Platform/cicd-intsuite</strong></span><span>📅 2026-07-28T02:28:54Z</span><span>🌍 DEV, QA</span><span>📦 8 BTP packages</span>
     </div>
     <div class="scope-note">ℹ️ This dashboard covers Integration Flow (IFlow) artifacts only. Other artifact types (Value Mappings, Script Collections, etc.) are not included.</div>
     <nav class="page-nav">
@@ -276,7 +276,7 @@
       <h2>📈 Summary</h2>
       <div class="summary-grid">
         <div class="summary-card" data-card-filter="btp" onclick="toggleCardFilter('btp')">
-          <div class="number">7</div>
+          <div class="number">8</div>
           <div class="label">BTP Packages</div>
         </div>
         <div class="summary-card" data-card-filter="not-all-envs" onclick="toggleCardFilter('not-all-envs')">
@@ -284,13 +284,13 @@
           <div class="label">Not on All Environments</div>
         </div>
         <div class="summary-card" data-card-filter="git-issues" onclick="toggleCardFilter('git-issues')">
-          <div class="number">7</div>
+          <div class="number">8</div>
           <div class="label">Git Config Issues</div>
-          <div class="sub-label">🔴 7 packages missing entirely</div>
+          <div class="sub-label">🔴 8 packages missing entirely</div>
           <div class="sub-label">⚠️ 0 packages with missing IFlows</div>
         </div>
       </div>
-      <div class="alert">⚠️ <strong>Action required:</strong> 7 package(s) and 20 IFlow(s) found on BTP have no Git deployment configuration.</div>
+      <div class="alert">⚠️ <strong>Action required:</strong> 8 package(s) and 22 IFlow(s) found on BTP have no Git deployment configuration.</div>
     </div>
     <div class="filter-bar">
       <input type="text" id="searchInput" placeholder="🔍 Filter by package or IFlow name/ID..." onkeyup="filterDashboard()">
@@ -445,6 +445,12 @@
           </tr>
         </thead>
         <tbody>
+          <tr class="notingit-row" data-iflow="Dummy_Iflow_QA Dummy_Iflow_QA" data-loglevel="">
+            <td class="iflow-name" title="Dummy_Iflow_QA">❓ Dummy_Iflow_QA</td>
+            <td class="iflow-id" title="Dummy_Iflow_QA"><code class="copyable" onclick="showIdMenu(event,'iflow','Dummy_Iflow_QA','Dummy1','DEV','','','DEV')" title="Click for options">Dummy_Iflow_QA</code></td>
+            <td class="env-cell"><span class="row-item">—</span><span class="row-item">—</span><span class="row-item">✅ STARTED v1.0.3</span></td>
+            <td class="env-cell"><span class="row-item">—</span><span class="row-item">—</span><span class="row-item">—</span></td>
+          </tr>
           <tr class="notingit-row" data-iflow="Dummy_Iflow Dummy_Iflow_new" data-loglevel="">
             <td class="iflow-name" title="Dummy_Iflow_new">❓ Dummy_Iflow_new</td>
             <td class="iflow-id" title="Dummy_Iflow"><code class="copyable" onclick="showIdMenu(event,'iflow','Dummy_Iflow','Dummy1','DEV,QA','','','DEV')" title="Click for options">Dummy_Iflow</code></td>
@@ -534,6 +540,32 @@
             <td class="iflow-id" title="FILTER"><code class="copyable" onclick="showIdMenu(event,'iflow','FILTER','QADUMMYPACKAGE','QA','','','QA')" title="Click for options">FILTER</code></td>
             <td class="env-not-found" title="Package not found on DEV">📦 Not found</td>
             <td class="env-cell"><span class="row-item">—</span><span class="row-item">—</span><span class="row-item">✅ STARTED v1.0.1</span></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+    <div class="package-section collapsed" data-package="TEST1 TEST1" data-source="btp" data-git-found="false" data-has-nogit-iflows="true" data-missing-envs="false">
+      <div class="package-header not-in-git" onclick="togglePackage(this)">
+        <h2><span class="toggle-arrow">▶</span> ❓ 📦 TEST1 (<code class="copyable" onclick="showIdMenu(event,'package','TEST1','','DEV,QA','TEST1','false')" title="Click for options">TEST1</code>)</h2>
+        <div class="meta">❓ <strong>Not found in Git</strong> — This package exists on BTP but has no deployment configuration</div>
+      </div>
+      <div class="package-body">
+      <table>
+        <thead>
+          <tr>
+            <th>IFlow Name</th>
+            <th>IFlow ID</th>
+            <th>DEV<br><sub>Deploy · LogLevel · Runtime</sub></th>
+            <th>QA<br><sub>Deploy · LogLevel · Runtime</sub></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="notingit-row" data-iflow="test_iflow test_iflow" data-loglevel="">
+            <td class="iflow-name" title="test_iflow">❓ test_iflow</td>
+            <td class="iflow-id" title="test_iflow"><code class="copyable" onclick="showIdMenu(event,'iflow','test_iflow','TEST1','DEV,QA','','','')" title="Click for options">test_iflow</code></td>
+            <td class="env-cell"><span class="row-item">—</span><span class="row-item">—</span><span class="row-item">⚫ N/A</span></td>
+            <td class="env-cell"><span class="row-item">—</span><span class="row-item">—</span><span class="row-item">⚫ N/A</span></td>
           </tr>
         </tbody>
       </table>
